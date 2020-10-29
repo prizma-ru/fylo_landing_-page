@@ -6,13 +6,18 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
 }
-li{
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.header__menu{
+    display: flex;
     
-    display: inline-block;
+align-items: center;
+    
+
 }
-.card{
-    display: inline-block;
-}
-.card div > img{
-    float: right;
+li{
+     display: inline-block;
+     margin-left: 30px;
 }
