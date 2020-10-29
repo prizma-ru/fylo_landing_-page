@@ -6,3 +6,13 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
 }
+li{
+    
+    display: inline-block;
+}
+.card{
+    display: inline-block;
+}
+.card div > img{
+    float: right;
+}
