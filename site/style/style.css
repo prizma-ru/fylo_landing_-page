@@ -7,44 +7,157 @@
 --desaturated-blue: hsl(238, 22%, 44%);
 
 /*### Accent*/
-
 --bright-blue: hsl(224, 93%, 58%);
 --moderate-cyan: hsl(170, 45%, 43%);
 
 /*### Neutral*/
 
---light-gGrayish-bBlue: hsl(240, 75%, 98%);
+--light-grayish-blue: hsl(240, 75%, 98%);
 --light-gray: hsl(0, 0%, 75%);
 }
 
 *{
     box-sizing: border-box;
-    margin: 0;
+    
 } /*обнуляем отступы*/
 body{
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;    
+    color: var(--very-dark-blue);
+    margin: 0;
 }
-.container {
-    width: 100%; /*ширина блока*/
-    max-width: 1440px; /*максимальный размер 1440пх*/
-    margin: 0 auto; /*выровниваем по центру*/
-    padding: 15px;
-    
-}
-.header{
-    display: flex;
-    justify-content: space-between;
-}
-.header__menu{
-    display: flex;
-    /*align-items: center;*/
+a {
+	color: #3da08f;
 }
 
-li{
-     display: inline-block;
-     margin-left: 30px;
+
+h2 {
+	font-family: 'Raleway', sans-serif;
 }
-div>img{
+
+h2 {
+	font-size: 1.8em;
+	margin-top: 0;
+}
+img {
+	max-width: 100%;
+}
+.container {
+    width: 1440px; /*ширина блока*/
+    max-width: 100%; /*максимальный размер 1440пх*/
+    margin: 0 auto; /*выровниваем по центру*/
+    padding: 30px;
+    
+}
+.flex{
+    display: flex;
+    align-items: center;
+	flex-wrap: wrap; /*flex-wrap задает правила вывода flex-элементов —  в одну строку или в несколько, с переносом блоков. Если перенос разрешен, то возможно задать направление, в котором выводятся блоки.*/
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.flex >div,
+.flex > ul{
+    flex: 1; /*flex-grow определяет как много свободного пространства во flex-контейнере должно быть назначено текущему элементу */
+}
+.flex > div:first-child {
+	margin-right: 20px;
+}
+
+.flex > div:last-child {
+	margin-left: 20px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*justify-content определяет, как браузер распределяет пространство между и вокруг элементов контента вдоль главной оси flex контейнера, или вдоль строчной оси grid контейнера.*/
+    margin: 30px 0;
+}
+nav ul{
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+nav ul li{
+    margin-left: 50px;
+}
+nav ul a{
+    color: var(--desaturated-blue);
+    font-family: 'Raleway', sans-serif;
+	text-decoration: none;
+}
+
+form {
+	display: flex;
+}
+
+.card{
+    display: flex;
+    align-items: center; /*выравнивание по центру*/
+    /*border: 3px solid red;*/
+    width: 80%;
+    background-color: var(--light-grayish-blue);
+    
+}
+.card img{
+    border-radius: 50%;
+    height: 50px;
+    margin: 0 15px 0 15px;
+    width: 50px;
+}
+input{
+    flex: 0.7;
+    border: 1px solid var(--very-dark-blue);
+	border-radius: 2px;
+	font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    padding: 15px;
+    
+
+}
+input::placeholder{
+    color: var(--light-gray);
+
+}
+button{
+    flex: 0.3;
+    background-color: var(--bright-blue);
+    border-radius: 2px;
+    padding: 15px 0;
+    border: none;
+    margin-left: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+
+
+}
+.get {
+	background-color: var(--desaturated-blue);
+	color: #fff;
+    padding: 50px 0;
+}
+.get form {
+	flex-direction: column;
+}
+.get form input {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border: none;
+	flex: 1;
+}
+.get form input{
+    flex: 1;
+    border: 1px solid var(--very-dark-blue);
+	border-radius: 2px;
+	font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    padding-left: 20px;
+
+}
+.get form button{
+    margin: 20px 0;
     width: 50%;
 }
